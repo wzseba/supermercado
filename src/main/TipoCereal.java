@@ -15,4 +15,8 @@ public enum TipoCereal {
 	public int getCalorias() {
 		return calorias;
 	}
+	
+	public String toString() {
+		return this.name() + " - " + this.calorias;
+	}
 }

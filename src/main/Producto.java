@@ -30,7 +30,7 @@ public class Producto {
 	
 	/*Sobreescritura toString*/
 	public String toString() {
-		return "Marca: " + marca + "Precio: " + precio;
+		return "Marca: " + marca + " Precio $" + precio;
 	}
 	
 }

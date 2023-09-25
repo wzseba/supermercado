@@ -65,6 +65,6 @@ public class Vino extends ProductoConDescuento implements EsLiquido, EsAlimento{
 	}
 
 	public String toString() {
-		return super.toString();
+		return super.toString() + " - " + tipoVino + " - " + gradoAlcohol + " - " + caducidad + " - " + volumen + " - " + tipoEnvase + " - " + getCalorias();
 	}
 }

@@ -10,6 +10,7 @@ public class Cereal extends Producto implements EsAlimento {
 	public Cereal(String marca, double precio, TipoCereal tipoCereal) {
 		super(marca,precio);
 		this.tipoCereal = tipoCereal;
+		this.caducidad = LocalDate.MAX;
 	}
 	
 	@Override
@@ -38,7 +39,7 @@ public class Cereal extends Producto implements EsAlimento {
 
 	@Override
 	public String toString() {
-		return "Cereal [cereal=" + tipoCereal + ", caducidad=" + caducidad + ", getCalorias()=" + getCalorias() + "]";
+		return super.toString() + " - " + this.tipoCereal.toString() + " - " + this.caducidad.toString() + " - " + this.getCalorias();
 	}
 	
 

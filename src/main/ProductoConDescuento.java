@@ -21,4 +21,8 @@ public class ProductoConDescuento extends Producto implements ConDescuento{
 	public double getPrecioDescuento() {
 		return this.getPrecio() - this.getPrecio() * this.getDescuento() / 100;
 	}
+	
+	public String toString() {
+		return super.toString() + " - " + this.getDescuento();
+	}
 }
