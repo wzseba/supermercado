@@ -8,7 +8,7 @@ public enum TipoCereal {
 	
 	private int calorias;
 	
-	TipoCereal(int calorias) {
+	private TipoCereal(int calorias) {
 		this.calorias = calorias;
 	}
 	
