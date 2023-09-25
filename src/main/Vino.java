@@ -1,11 +1,14 @@
 package main;
 
-public class Vino extends Producto implements EsLiquido{
+import java.time.LocalDate;
+
+public class Vino extends ProductoConDescuento implements EsLiquido, EsAlimento{
 
 	private String tipoVino;
 	private	double gradoAlcohol;
 	private double volumen;
 	private String tipoEnvase;
+	private LocalDate caducidad;
 	
 	public Vino(String marca, double precio, String tipoVino, double gradoAlcohol) {
 		super(marca,precio);
@@ -13,9 +16,19 @@ public class Vino extends Producto implements EsLiquido{
 		this.gradoAlcohol = gradoAlcohol;
 		this.volumen = 1.5;
 		this.tipoEnvase = "";
+		this.caducidad = LocalDate.MAX;
 	}
 	
-	public double getCalorias() {
+	@Override
+	public void setCaducidad(LocalDate fc) {
+		this.caducidad = fc;
+	}
+	
+	public LocalDate getCaducidad() {
+		return caducidad;
+	}
+	
+	public int getCalorias() {
 		return (int) getGradoAlcohol() * 10;
 	}
 
